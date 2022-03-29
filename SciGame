@@ -1,4 +1,24 @@
-Fix Sci error --
+Fix Sci error -->
+
+Click in order:
+
+Magnesium (Mg)
+Phosphorus (P)
+Sulfur (S)
+Chlorine (Cl)
+Potassium (K)
+Calcium (Ca)
+Titanium (Ti)
+Iron (Fe)
+Cobalt (Co)
+Gold (Au)
+Silver (Ag)
+
+
+
+///////////////////
+
+
 
 using System;
 using System.Collections.Generic;
@@ -212,7 +232,85 @@ namespace GibJohn_2
             CheckAnswer();
         }
 
-        
+        private void label5_Click(object sender, EventArgs e)
+        {
+            ElementClicked = 10;
+            label_ElementClicked.Text = ElementClicked.ToString();
+            CheckAnswer();
+        }
+
+        private void label63_Click(object sender, EventArgs e)
+        {
+            ElementClicked = 11;
+            label_ElementClicked.Text = ElementClicked.ToString();
+            CheckAnswer();
+        }
+
+        private void label73_Click(object sender, EventArgs e)
+        {
+            ElementClicked = 12;
+            label_ElementClicked.Text = ElementClicked.ToString();
+            CheckAnswer();
+        }
+
+        private void label90_Click(object sender, EventArgs e)
+        {
+            ElementClicked = 13;
+            label_ElementClicked.Text = ElementClicked.ToString();
+            CheckAnswer();
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+            ElementClicked = 14;
+            label_ElementClicked.Text = ElementClicked.ToString();
+            CheckAnswer();
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+            ElementClicked = 15;
+            label_ElementClicked.Text = ElementClicked.ToString();
+            CheckAnswer();
+        }
+
+        private void label15_Click(object sender, EventArgs e)
+        {
+            ElementClicked = 16;
+            label_ElementClicked.Text = ElementClicked.ToString();
+            CheckAnswer();
+        }
+
+        private void label18_Click(object sender, EventArgs e)
+        {
+            ElementClicked = 17;
+            label_ElementClicked.Text = ElementClicked.ToString();
+            CheckAnswer();
+        }
+
+        private void label19_Click(object sender, EventArgs e)
+        {
+            ElementClicked = 18;
+            label_ElementClicked.Text = ElementClicked.ToString();
+            CheckAnswer();
+        }
+
+        private void label40_Click(object sender, EventArgs e)
+        {
+            ElementClicked = 19;
+            label_ElementClicked.Text = ElementClicked.ToString();
+            CheckAnswer();
+        }
+
+        private void label30_Click(object sender, EventArgs e)
+        {
+            ElementClicked = 20;
+            label_ElementClicked.Text = ElementClicked.ToString();
+            CheckAnswer();
+        }
     }
 }
 
+
+
+    
