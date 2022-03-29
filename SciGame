@@ -1,0 +1,218 @@
+Fix Sci error --
+
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace GibJohn_2
+{
+    public partial class ScienceGame : Form
+    {
+        // Creates variables, which we can store values in later
+        int ElementClicked;
+        int score;
+        int RandomElement;
+
+        public void GenerateQuestion()
+        {
+            // This method generates a new random element from the 20 different ones available
+            Random rnd = new Random();
+            RandomElement = rnd.Next(1, 20);
+            label_Cheat.Text = RandomElement.ToString();
+
+            // This part of the method assigns a name to the randomly generated element
+            switch (RandomElement)
+            {
+                case 1:
+                    lbl_ElementName.Text = ("Hydrogen");
+                    break;
+
+                case 2:
+                    lbl_ElementName.Text = ("Helium");
+                    break;
+
+                case 3:
+                    lbl_ElementName.Text = ("Lithium");
+                    break;
+
+                case 4:
+                    lbl_ElementName.Text = ("Carbon");
+                    break;
+
+                case 5:
+                    lbl_ElementName.Text = ("Nitrogen");
+                    break;
+
+                case 6:
+                    lbl_ElementName.Text = ("Oxygen");
+                    break;
+
+                case 7:
+                    lbl_ElementName.Text = ("Fluorine");
+                    break;
+
+                case 8:
+                    lbl_ElementName.Text = ("Neon");
+                    break;
+
+                case 9:
+                    lbl_ElementName.Text = ("Sodium");
+                    break;
+
+                case 10:
+                    lbl_ElementName.Text = ("Magnesium");
+                    break;
+
+                case 11:
+                    lbl_ElementName.Text = ("Phosphorus");
+                    break;
+
+                case 12:
+                    lbl_ElementName.Text = ("Sulfur");
+                    break;
+
+                case 13:
+                    lbl_ElementName.Text = ("Chlorine");
+                    break;
+
+                case 14:
+                    lbl_ElementName.Text = ("Potassium");
+                    break;
+
+                case 15:
+                    lbl_ElementName.Text = ("Calcium");
+                    break;
+
+                case 16:
+                    lbl_ElementName.Text = ("Titanium");
+                    break;
+
+                case 17:
+                    lbl_ElementName.Text = ("Iron");
+                    break;
+
+                case 18:
+                    lbl_ElementName.Text = ("Cobalt");
+                    break;
+
+                case 19:
+                    lbl_ElementName.Text = ("Gold");
+                    break;
+
+                case 20:
+                    lbl_ElementName.Text = ("Silver");
+                    break;
+            }
+        }
+
+        private void CheckAnswer()
+        {
+            // This method checks your answer, grants you +1 score if you are correct, and restarts the whole game using GenerateQuestion
+            if (ElementClicked == RandomElement)
+            {
+                score += 1;
+                lbl_Score.Text = score.ToString();
+                MessageBox.Show("Correct! +1 score :)");
+                ElementClicked = 0;
+                GenerateQuestion();
+            }
+            else
+            {
+                score -= 1;
+                lbl_Score.Text = score.ToString();
+                MessageBox.Show("Incorrect. -1 score :(");
+                ElementClicked = 0;
+                GenerateQuestion();
+            }
+
+        }
+        public ScienceGame()
+        {
+            InitializeComponent();
+        }
+        private void ScienceGame_Load(object sender, EventArgs e)
+        {
+            // This makes sure that one of the very first things the form does is load a question
+            GenerateQuestion();
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            GenerateQuestion();            
+        }
+
+
+        // Each of these clickable labels are used to provide input to answer
+        private void label2_Click(object sender, EventArgs e)
+        {
+            ElementClicked = 1;
+            label_ElementClicked.Text = ElementClicked.ToString();
+            CheckAnswer();
+                      
+        }
+
+        private void label51_Click(object sender, EventArgs e)
+        {
+            ElementClicked = 2;
+            label_ElementClicked.Text = ElementClicked.ToString();
+            CheckAnswer();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            ElementClicked = 3;
+            label_ElementClicked.Text = ElementClicked.ToString();
+            CheckAnswer();
+        }
+
+        private void label57_Click(object sender, EventArgs e)
+        {
+            ElementClicked = 4;
+            label_ElementClicked.Text = ElementClicked.ToString();
+            CheckAnswer();
+        }
+
+        private void label55_Click(object sender, EventArgs e)
+        {
+            ElementClicked = 5;
+            label_ElementClicked.Text = ElementClicked.ToString();
+            CheckAnswer();
+        }
+
+        private void label53_Click(object sender, EventArgs e)
+        {
+            ElementClicked = 6;
+            label_ElementClicked.Text = ElementClicked.ToString();
+            CheckAnswer();
+        }
+
+        private void label52_Click(object sender, EventArgs e)
+        {
+            ElementClicked = 7;
+            label_ElementClicked.Text = ElementClicked.ToString();
+            CheckAnswer();
+        }
+
+        private void label56_Click(object sender, EventArgs e)
+        {
+            ElementClicked = 8;
+            label_ElementClicked.Text = ElementClicked.ToString();
+            CheckAnswer();
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+            ElementClicked = 9;
+            label_ElementClicked.Text = ElementClicked.ToString();
+            CheckAnswer();
+        }
+
+        
+    }
+}
+
